@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:madcamp_week222/views/splashscreen.dart';
+import 'package:madcamp_week222/views/screen_signup.dart';
+import 'package:madcamp_week222/views/screen_splash.dart';
+import 'package:madcamp_week222/views/screen_welcome.dart';
 import 'colors.dart';
 import 'navigation/bottom_navigation.dart';
 
@@ -19,6 +21,8 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const SplashScreen(),
+        '/welcome': (context) => const WelcomeScreen(),
+        '/signup': (context) => const SignupScreen(),
         '/home': (context) => const MainScreen(),
       },
     );
@@ -51,6 +55,7 @@ class _MainScreenState extends State<MainScreen> {
         title: const Text('Bottom Navigation Example'),
       ),
       body: _pages[_currentIndex], // 현재 선택된 페이지 표시
+      backgroundColor: AppColors.background,
       bottomNavigationBar: ClipRRect(
         borderRadius: const BorderRadius.only(
           topLeft: Radius.circular(20.0),

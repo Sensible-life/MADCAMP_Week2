@@ -57,12 +57,22 @@ dev_dependencies:
 flutter:
   assets:
     - assets/images/
+    - assets/fonts/
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
-
+  fonts:
+    - family: YCF # 폰트 이름
+      fonts:
+        - asset: assets/fonts/SDChildfundkoreaTTF.ttf
+    - family: GG_Regular
+      fonts:
+        - asset: assets/fonts/경기천년바탕_Regular.ttf
+    - family: GG_Medium
+      fonts:
+        - asset: assets/fonts/경기천년제목_Medium.ttf
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
@@ -100,7 +110,6 @@ flutter_native_splash:
   android: true
   ios: true
   web: true
-
 
 flutter_icons:
   android: true
